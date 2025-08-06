@@ -23,4 +23,6 @@ I'm passionate about cybersecurity, open-source software, and building tools tha
 
 Feel free to explore, and don't hesitate to reach out if you have questions or suggestions!
 
+Contact me through email: **kbinkenaid@gmail.com**
+
 Thanks for stopping by! 🚀
