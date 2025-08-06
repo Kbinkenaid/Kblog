@@ -4,9 +4,9 @@ date: 2025-07-22
 draft: false
 ---
 
-# Project Amaan: A hub for Cyber Security T
+# Project Amaan: A hub for Cyber Security Tools
 
-![Amaan Logo](https://raw.githubusercontent.com/kbinkenaid/project-amaan/main/public/logo.png)
+![Amaan Logo](https://raw.githubusercontent.com/kbinkenaid/blog/main/public/Gemini_Generated_Image_aemirlaemirlaemi.png)
 
 The target was to locally host several cybersecurity tools in a single hub. Making everything Open Sourced, and Free to Use, it was not the easiest but I got there in the end.
 
