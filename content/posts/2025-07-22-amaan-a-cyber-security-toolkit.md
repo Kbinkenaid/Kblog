@@ -4,11 +4,11 @@ date: 2025-07-22
 draft: false
 ---
 
-# Project Amaan: Making Cybersecurity Tools Actually Accessible
+# Project Amaan: A hub for Cyber Security T
 
 ![Amaan Logo](https://raw.githubusercontent.com/kbinkenaid/project-amaan/main/public/logo.png)
 
-The target was to locally host several cybersecurity tools in a single hub. Making everything Open Sourced, and Free to Use, was not the easiest but I got there in the end.
+The target was to locally host several cybersecurity tools in a single hub. Making everything Open Sourced, and Free to Use, it was not the easiest but I got there in the end.
 
 ## What It Actually Does
 
