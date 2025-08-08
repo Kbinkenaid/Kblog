@@ -1,0 +1,6 @@
+{{ $custom := resources.Get "ananke/css/custom.css" }}
+{{ if $custom }}
+  <style>
+    {{ $custom.Content | safeCSS }}
+  </style>
+{{ end }}

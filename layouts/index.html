@@ -1,0 +1,46 @@
+{{ define "main" }}
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+    {{ .Content }}
+  </article>
+
+  {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
+  {{ $mainSections := site.Params.mainSections | compare.Default (collections.Slice "post") }}
+  {{ $show_recent_posts := site.Params.ananke.show_recent_posts }}
+  {{ $section := collections.Where $.Site.RegularPages "Section" "in" $mainSections }}
+  {{ $section_count := len $section }}
+
+  {{ if and ($show_recent_posts) (compare.Ge $section_count 1) }}
+    <div class="pa3 pa4-ns w-100 center">
+      <section class="w-100 mw8 center">
+        <h2 class="f2 fw6 tc mb4 dark-gray">Latest Posts</h2>
+        <div class="flex flex-wrap justify-center">
+          {{/* Range through all posts in the section */}}
+          {{ range $section }}
+            <div class="w-100 w-45-ns ma2 mb4 relative bg-white ba b--light-gray br3 shadow-4 hover-shadow-5 transition-all">
+              <article class="pa4">
+                <header class="mb3">
+                  <h3 class="f4 fw6 near-black mb2 lh-title">
+                    <a href="{{ .RelPermalink }}" class="link dark-gray hover-black transition-colors">
+                      {{ .Title }}
+                    </a>
+                  </h3>
+                  <time class="f6 gray db mb2" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                    {{ .Date.Format "January 2, 2006" }}
+                  </time>
+                </header>
+                <div class="nested-links f5 lh-copy nested-copy-line-height gray mb3">
+                  {{ .Summary }}
+                </div>
+                <footer>
+                  <a href="{{.RelPermalink}}" class="f6 link dim br2 ph3 pv2 mb2 dib white bg-dark-gray hover-bg-black transition-colors">
+                    Read More →
+                  </a>
+                </footer>
+              </article>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+    </div>
+  {{ end }}
+{{ end }}

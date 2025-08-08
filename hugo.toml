@@ -4,6 +4,13 @@ title = 'Kblog'
 
 theme = "ananke"
 
+[params]
+  mainSections = ["posts"]
+
+[params.ananke]
+  show_recent_posts = true
+  recent_posts_number = 10
+
 [publish]
 github = "Kbinkenaid/Kblog"
 branch = "gh-pages"

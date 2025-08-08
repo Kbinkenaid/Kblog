@@ -1,0 +1,43 @@
+{{ define "main" }}
+  <article class="pa3 pa4-ns">
+    <header class="tc mb4">
+      <h1 class="f2 fw6 dark-gray">{{ .Title }}</h1>
+      {{ with .Content }}
+        <section class="cf ph3 ph5-l pv3 f4 tc-l center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+          {{ . }}
+        </section>
+      {{ end }}
+    </header>
+    
+    <section class="w-100 mw8 center">
+      <div class="flex flex-wrap justify-center">
+        {{ range .Paginator.Pages }}
+          <div class="w-100 w-45-ns ma2 mb4 relative bg-white ba b--light-gray br3 shadow-4 hover-shadow-5 transition-all">
+            <article class="pa4">
+              <header class="mb3">
+                <h2 class="f4 fw6 near-black mb2 lh-title">
+                  <a href="{{ .RelPermalink }}" class="link dark-gray hover-black transition-colors">
+                    {{ .Title }}
+                  </a>
+                </h2>
+                <time class="f6 gray db mb2" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                  {{ .Date.Format "January 2, 2006" }}
+                </time>
+              </header>
+              <div class="nested-links f5 lh-copy nested-copy-line-height gray mb3">
+                {{ .Summary }}
+              </div>
+              <footer>
+                <a href="{{.RelPermalink}}" class="f6 link dim br2 ph3 pv2 mb2 dib white bg-dark-gray hover-bg-black transition-colors">
+                  Read More →
+                </a>
+              </footer>
+            </article>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+    
+    {{- template "_internal/pagination.html" . -}}
+  </article>
+{{ end }}
