@@ -71,3 +71,9 @@ This isn't meant for advanced penetration testing scenarios where you need preci
 Perfect for security audits, network documentation, and those moments when you need quick reconnaissance without the command-line archaeology.
 
 The tool handles the complexity so you can focus on analyzing the results instead of constructing the perfect nmap command.
+
+## Links:
+
+* [GitHub Repository - Nmap.py](https://github.com/kbinkenaid/Scripts/blob/main/Recon/Nmap.py)
+
+For suggestions, contact me at [kbinkenaid@gmail.com](mailto:kbinkenaid@gmail.com)
