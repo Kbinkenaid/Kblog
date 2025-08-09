@@ -1,6 +1,7 @@
 ---
 title: "Welcome to My Tech Blog"
 date: 2025-08-06
+weight: -1
 draft: false
 ---
 
