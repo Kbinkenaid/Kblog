@@ -75,9 +75,11 @@ jobs:
                 return;
               }
               
-              // Configure email transporter
+              // Configure email transporter for SendGrid
               const transporter = nodemailer.createTransporter({
-                service: 'gmail',
+                host: 'smtp.sendgrid.net',
+                port: 587,
+                secure: false,
                 auth: {
                   user: process.env.EMAIL_USER,
                   pass: process.env.EMAIL_PASS
