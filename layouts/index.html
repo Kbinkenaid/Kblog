@@ -43,4 +43,86 @@
       </section>
     </div>
   {{ end }}
+  
+  {{/* Newsletter Signup Section */}}
+  <section class="w-100 mw8 center pa3 pa4-ns">
+    <div class="bg-white ba b--light-gray br3 shadow-2 pa4 tc">
+      <h3 class="f3 fw6 dark-gray mb3">Stay Updated</h3>
+      <p class="f5 gray mb4 lh-copy measure center">Get notified when I publish new posts about cybersecurity, automation, and tech insights.</p>
+      
+      <form id="newsletter-form" class="mw6 center">
+        <div class="flex flex-column flex-row-ns items-center justify-center">
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Enter your email address" 
+            required
+            class="input-reset ba b--light-gray pa3 mb3 mb0-ns mr3-ns w-100 w-60-ns br2 f5"
+            id="email-input"
+          >
+          <button 
+            type="submit" 
+            class="f5 link dim br2 ph4 pv3 mb2 dib white bg-dark-gray hover-bg-black transition-colors bn pointer w-100 w-auto-ns"
+            id="subscribe-btn"
+          >
+            Subscribe
+          </button>
+        </div>
+      </form>
+      
+      <div id="form-message" class="dn mt3"></div>
+    </div>
+  </section>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('newsletter-form');
+      const messageDiv = document.getElementById('form-message');
+      const submitBtn = document.getElementById('subscribe-btn');
+      
+      if (form) {
+          form.addEventListener('submit', async function(e) {
+              e.preventDefault();
+              
+              const email = document.getElementById('email-input').value;
+              
+              submitBtn.textContent = 'Subscribing...';
+              submitBtn.disabled = true;
+              
+              try {
+                  // Submit to Formspree first, then trigger GitHub via webhook
+                  const formspreeResponse = await fetch('https://formspree.io/f/xzzvwyzz', {
+                      method: 'POST',
+                      headers: {
+                          'Accept': 'application/json',
+                          'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({
+                          email: email,
+                          _subject: 'New Blog Subscription'
+                      })
+                  });
+                  
+                  const response = formspreeResponse;
+                  
+                  if (response.ok) {
+                      messageDiv.className = 'mt3 pa3 bg-light-green dark-green br2';
+                      messageDiv.textContent = '✅ Thanks for subscribing! You\'ll get notified of new posts.';
+                      form.reset();
+                  } else {
+                      throw new Error('Subscription failed');
+                  }
+                  
+              } catch (error) {
+                  console.error('Subscription error:', error);
+                  messageDiv.className = 'mt3 pa3 bg-light-red dark-red br2';
+                  messageDiv.textContent = '❌ Something went wrong. Please try again.';
+              } finally {
+                  submitBtn.textContent = 'Subscribe';
+                  submitBtn.disabled = false;
+              }
+          });
+      }
+  });
+  </script>
 {{ end }}

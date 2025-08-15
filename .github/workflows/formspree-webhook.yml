@@ -1,0 +1,55 @@
+name: Handle Formspree Subscription
+
+on:
+  repository_dispatch:
+    types: [new-subscriber]
+
+jobs:
+  add-subscriber:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Add subscriber to list
+        run: |
+          # Extract email from webhook payload
+          EMAIL="${{ github.event.client_payload.email }}"
+          
+          # Add to subscribers.json
+          node -e "
+          const fs = require('fs');
+          const email = process.env.EMAIL;
+          
+          let data = { subscribers: [] };
+          try {
+            data = JSON.parse(fs.readFileSync('data/subscribers.json', 'utf8'));
+          } catch (e) {}
+          
+          if (!data.subscribers.some(sub => sub.email === email)) {
+            data.subscribers.push({
+              email: email,
+              dateAdded: new Date().toISOString(),
+              active: true
+            });
+            
+            fs.writeFileSync('data/subscribers.json', JSON.stringify(data, null, 2));
+            console.log('Added subscriber:', email);
+          }
+          " EMAIL="$EMAIL"
+
+      - name: Commit updated subscriber list
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/subscribers.json
+          git diff --staged --quiet || git commit -m "Add new subscriber: ${{ github.event.client_payload.email }}"
+          git push

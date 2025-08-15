@@ -1,0 +1,44 @@
+name: Add New Subscriber
+
+on:
+  repository_dispatch:
+    types: [new-subscriber]
+
+jobs:
+  add-subscriber:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Add subscriber to list
+        env:
+          SUBSCRIBER_EMAIL: ${{ github.event.client_payload.email }}
+        run: |
+          echo "Processing subscription for: $SUBSCRIBER_EMAIL"
+          
+          # Use the existing management script
+          node scripts/manage-subscribers.js add "$SUBSCRIBER_EMAIL"
+
+      - name: Commit updated subscriber list
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          
+          # Check if there are changes to commit
+          if git diff --quiet data/subscribers.json; then
+            echo "No changes to subscriber list (email may already exist)"
+          else
+            git add data/subscribers.json
+            git commit -m "🔔 Add new subscriber: ${{ github.event.client_payload.email }}"
+            git push
+            echo "✅ Subscriber added and committed to repository"
+          fi

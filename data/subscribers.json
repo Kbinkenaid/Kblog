@@ -1,0 +1,14 @@
+{
+  "subscribers": [
+    {
+      "email": "test@example.com",
+      "dateAdded": "2025-08-15T10:07:46.011Z",
+      "active": true
+    },
+    {
+      "email": "kbinkenaid@gmail.com",
+      "dateAdded": "2025-08-15T10:20:17.411Z",
+      "active": true
+    }
+  ]
+}
