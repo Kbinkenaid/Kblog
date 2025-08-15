@@ -9,6 +9,11 @@
       "email": "kbinkenaid@gmail.com",
       "dateAdded": "2025-08-15T10:20:17.411Z",
       "active": true
+    },
+    {
+      "email": "test.automation@example.com",
+      "dateAdded": "2025-08-15T10:23:35.363Z",
+      "active": true
     }
   ]
 }
