@@ -1,6 +1,6 @@
 baseURL = 'https://kbinkenaid.github.io/Kblog/'
 languageCode = 'en-us'
-title = 'Kblog'
+title = 'Blog'
 
 theme = "ananke"
 

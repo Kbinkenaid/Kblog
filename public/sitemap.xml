@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/Kblog/posts/2025-08-08-automating-network-scanning-with-python/</loc>
-    <lastmod>2025-08-08T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/Kblog/posts/2025-08-15-email-system-fully-operational/</loc>
+    <lastmod>2025-08-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/Kblog/posts/</loc>
-    <lastmod>2025-08-08T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/Kblog/</loc>
+    <lastmod>2025-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/Kblog/posts/2025-08-14-vibe-coding-a-website/</loc>
+    <lastmod>2025-08-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/Kblog/posts/2025-08-08-automating-network-scanning-with-python/</loc>
     <lastmod>2025-08-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/Kblog/posts/2025-07-22-amaan-a-cyber-security-toolkit/</loc>

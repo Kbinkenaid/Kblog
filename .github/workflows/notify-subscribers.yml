@@ -115,7 +115,7 @@ jobs:
                   <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
                     <div style="text-align: center; margin-bottom: 30px;">
                       <h1 style="color: #333; font-size: 28px; margin-bottom: 10px;">📝 New Blog Post</h1>
-                      <p style="color: #666; font-size: 16px;">Kblog - Cybersecurity & Tech Insights</p>
+                      <p style="color: #666; font-size: 16px;">Blog - Cybersecurity & Tech Insights</p>
                     </div>
                     
                     <div style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 25px; margin-bottom: 25px;">
@@ -126,7 +126,7 @@ jobs:
                     
                     <div style="text-align: center; color: #666; font-size: 14px; border-top: 1px solid #e9ecef; padding-top: 20px;">
                       <p>You're receiving this because you subscribed to blog updates.</p>
-                      <p><a href="${process.env.BLOG_URL}" style="color: #666;">Visit Kblog</a></p>
+                      <p><a href="${process.env.BLOG_URL}" style="color: #666;">Visit Blog</a></p>
                     </div>
                   </div>
                 `;
@@ -147,7 +147,7 @@ Visit: ${process.env.BLOG_URL}
                 for (const subscriber of subscribers) {
                   try {
                     await transporter.sendMail({
-                      from: `"Kblog" <${process.env.EMAIL_USER}>`,
+                      from: `"Blog" <${process.env.EMAIL_USER}>`,
                       to: subscriber.email,
                       subject: `📝 New Post: ${title}`,
                       text: emailText,

@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Kblog"
+title: "Welcome to Blog"
 ---
 
 # Welcome to My Tech Space

@@ -36,7 +36,7 @@ In your GitHub repository:
 2. Choose **Single Sender Verification**
 3. Add an email address you control (like your personal email)
 4. Fill out the form with your blog details:
-   - **From Name**: Kblog
+   - **From Name**: Blog
    - **From Email**: [your verified email]
    - **Reply To**: [same email]
    - **Company**: Your name or blog name
@@ -57,4 +57,4 @@ Your email notification system will now:
 
 ---
 
-**Alternative**: If you prefer Gmail, create a dedicated account like `kblog.notifications@gmail.com` and use App Passwords instead.
+**Alternative**: If you prefer Gmail, create a dedicated account like `blog.notifications@gmail.com` and use App Passwords instead.

@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to Kblog on Kblog</title>
+    <title>Welcome to Blog on Blog</title>
     <link>http://localhost:1313/Kblog/</link>
-    <description>Recent content in Welcome to Kblog on Kblog</description>
+    <description>Recent content in Welcome to Blog on Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/Kblog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🚀 Email System Now Fully Operational!</title>
+      <link>http://localhost:1313/Kblog/posts/2025-08-15-email-system-fully-operational/</link>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Kblog/posts/2025-08-15-email-system-fully-operational/</guid>
+      <description>&lt;h1 id=&#34;-email-system-now-fully-operational&#34;&gt;🚀 Email System Now Fully Operational!&lt;/h1&gt;&#xA;&lt;p&gt;Exciting news! The automated email notification system has been successfully configured and is now sending real emails to subscribers.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-system-architecture&#34;&gt;🔧 System Architecture&lt;/h2&gt;&#xA;&lt;p&gt;The notification system uses:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub Actions&lt;/strong&gt; for automation&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;SendGrid SMTP&lt;/strong&gt; for email delivery&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Node.js&lt;/strong&gt; for email processing&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JSON storage&lt;/strong&gt; for subscriber management&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;-what-subscribers-get&#34;&gt;📧 What Subscribers Get&lt;/h2&gt;&#xA;&lt;p&gt;Each notification email includes:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Eye-catching subject line with post title&lt;/li&gt;&#xA;&lt;li&gt;Clean, professional HTML formatting&lt;/li&gt;&#xA;&lt;li&gt;Direct link to the new blog post&lt;/li&gt;&#xA;&lt;li&gt;Consistent branding and styling&lt;/li&gt;&#xA;&lt;li&gt;Mobile-responsive design&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;-this-email-is-a-live-test&#34;&gt;🎯 This Email is a Live Test&lt;/h2&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re reading this via email notification, congratulations! You&amp;rsquo;re experiencing the fully operational email system in action.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vibe Coding A Website: From v0.dev Experiment to AI Innovation Hub</title>
+      <link>http://localhost:1313/Kblog/posts/2025-08-14-vibe-coding-a-website/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Kblog/posts/2025-08-14-vibe-coding-a-website/</guid>
+      <description>&lt;h1 id=&#34;vibe-coding-a-website-from-v0dev-experiment-to-ai-innovation-hub&#34;&gt;Vibe Coding A Website: From v0.dev Experiment to AI Innovation Hub&lt;/h1&gt;&#xA;&lt;p&gt;What started as a simple experiment with v0.dev quickly turned into one of those late-night vibe coding sessions where time disappears and you emerge hours later with something entirely different than what you planned. You know the feeling - you sit down to test a tool, and before you know it, you&amp;rsquo;re deep in the zone, refactoring, redesigning, and adding features you never intended.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Automating Network Scanning with Python: Making Nmap Less Painful</title>
       <link>http://localhost:1313/Kblog/posts/2025-08-08-automating-network-scanning-with-python/</link>
